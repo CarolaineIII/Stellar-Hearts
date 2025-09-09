@@ -351,7 +351,7 @@ visible = false
 tile_set = SubResource("TileSet_qvcyk")
 
 [node name="Coffee" type="Sprite2D" parent="."]
-position = Vector2(105, 112)
+position = Vector2(878, 546)
 scale = Vector2(4.9625, 4.9625)
 texture = SubResource("AtlasTexture_nxpqr")
 
