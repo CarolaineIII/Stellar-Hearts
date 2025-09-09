@@ -338,7 +338,6 @@ scale = Vector2(8, 7.99966)
 texture = SubResource("AtlasTexture_64url")
 
 [node name="play" type="TextureButton" parent="."]
-visible = false
 offset_left = 370.0
 offset_top = 417.0
 offset_right = 781.0
