@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c27s5xqgkr4xq"]
+
+[ext_resource type="Script" uid="uid://bb3mt7jfgj46u" path="res://scripts/firefly.gd" id="1_b6sfm"]
+[ext_resource type="Texture2D" uid="uid://cb8opflvu6ws4" path="res://topdown/fireflies/New_Piskel-1.png_3.png" id="1_yvvuc"]
+[ext_resource type="Texture2D" uid="uid://b2nev5lg6rs0a" path="res://topdown/fireflies/New_Piskel-1.png_5.png" id="3_tb4wy"]
+
+[node name="firefly" type="Node2D"]
+script = ExtResource("1_b6sfm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 15
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_yvvuc")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+z_index = 15
+scale = Vector2(1.125, 1.125)
+color = Color(1, 1, 0.666667, 1)
+energy = 13.7
+range_z_min = 0
+texture = ExtResource("3_tb4wy")
+texture_scale = 0.01
