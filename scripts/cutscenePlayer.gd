@@ -73,6 +73,8 @@ func next_point() -> void:
 		moving = true
 	else:
 		get_tree().change_scene_to_file("res://cenas/world.tscn")
+		print("O jogo comecou")
+		print(moving)
 		
 func _on_exit_pressed() -> void:
 	get_tree().quit()

@@ -1,9 +1,8 @@
-[gd_scene load_steps=21 format=4 uid="uid://bhls8570kuj70"]
+[gd_scene load_steps=20 format=4 uid="uid://bhls8570kuj70"]
 
 [ext_resource type="Script" uid="uid://bh6iecugafx0p" path="res://scripts/world.gd" id="1_yb5ho"]
 [ext_resource type="PackedScene" uid="uid://cq7w64orof780" path="res://instanciaveis/player.tscn" id="2_mjon1"]
 [ext_resource type="Texture2D" uid="uid://csrduemqx84c0" path="res://topdown/mana seed seasonal forest sample (summer)/seasonal sample (summer).png" id="3_8mpgf"]
-[ext_resource type="Script" uid="uid://dtqy7dbbo3oy3" path="res://scripts/cutscenePlayer.gd" id="4_8mpgf"]
 [ext_resource type="PackedScene" uid="uid://c27s5xqgkr4xq" path="res://instanciaveis/firefly.tscn" id="9_d5pkl"]
 
 [sub_resource type="Animation" id="Animation_xnx65"]
@@ -1557,9 +1556,6 @@ tile_set = SubResource("TileSet_p4w5v")
 
 [node name="player" parent="." instance=ExtResource("2_mjon1")]
 position = Vector2(-114, 0)
-script = ExtResource("4_8mpgf")
-speed = 80.0
-waypoints = Array[NodePath]([NodePath("../waypoints/point1"), NodePath("../waypoints/point2"), NodePath("../waypoints/point3")])
 
 [node name="fireflies" type="Node2D" parent="."]
 
