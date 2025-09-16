@@ -136,6 +136,7 @@ collision_layer = 2
 script = ExtResource("2_6k5nk")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 z_index = 11
 offset_left = -604.0
 offset_top = -356.0
@@ -149,14 +150,13 @@ sprite_frames = SubResource("SpriteFrames_fqpvm")
 animation = &"Idle"
 autoplay = "Idle"
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 11)
 scale = Vector2(1.5, 1)
 shape = SubResource("RectangleShape2D_ikx4k")
 
 [node name="exit" type="TextureButton" parent="."]
+visible = false
 z_index = 100
 offset_left = -552.0
 offset_top = -306.0

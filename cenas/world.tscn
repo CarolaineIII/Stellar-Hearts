@@ -1,9 +1,18 @@
-[gd_scene load_steps=20 format=4 uid="uid://bhls8570kuj70"]
+[gd_scene load_steps=23 format=4 uid="uid://bhls8570kuj70"]
 
 [ext_resource type="Script" uid="uid://bh6iecugafx0p" path="res://scripts/world.gd" id="1_yb5ho"]
 [ext_resource type="PackedScene" uid="uid://cq7w64orof780" path="res://instanciaveis/player.tscn" id="2_mjon1"]
+[ext_resource type="Texture2D" uid="uid://c47kl877ahkcw" path="res://topdown/UiCozyFree.png/UiCozyFree.png" id="2_xnx65"]
 [ext_resource type="Texture2D" uid="uid://csrduemqx84c0" path="res://topdown/mana seed seasonal forest sample (summer)/seasonal sample (summer).png" id="3_8mpgf"]
 [ext_resource type="PackedScene" uid="uid://c27s5xqgkr4xq" path="res://instanciaveis/firefly.tscn" id="9_d5pkl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_21bsp"]
+atlas = ExtResource("2_xnx65")
+region = Rect2(1, 129, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdgld"]
+atlas = ExtResource("2_xnx65")
+region = Rect2(17, 130, 14, 13)
 
 [sub_resource type="Animation" id="Animation_xnx65"]
 length = 0.001
@@ -1470,6 +1479,26 @@ sources/0 = SubResource("TileSetAtlasSource_j7cc2")
 [node name="world" type="Node2D"]
 script = ExtResource("1_yb5ho")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+z_index = 11
+offset_left = -11.0
+offset_top = -18.0
+offset_right = 1186.0
+offset_bottom = 687.0
+color = Color(0, 0, 0, 0.407843)
+
+[node name="exit" type="TextureButton" parent="CanvasLayer"]
+z_index = 100
+offset_left = 26.0
+offset_top = 12.0
+offset_right = 72.0
+offset_bottom = 58.0
+texture_normal = SubResource("AtlasTexture_21bsp")
+texture_pressed = SubResource("AtlasTexture_kdgld")
+stretch_mode = 0
+
 [node name="Fade" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -1557,6 +1586,15 @@ tile_set = SubResource("TileSet_p4w5v")
 [node name="player" parent="." instance=ExtResource("2_mjon1")]
 position = Vector2(-114, 0)
 
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2(114, 0)
+limit_left = -400
+limit_top = -300
+limit_right = 1400
+limit_bottom = 335
+position_smoothing_enabled = true
+position_smoothing_speed = 20.0
+
 [node name="fireflies" type="Node2D" parent="."]
 
 [node name="firefly" parent="fireflies" instance=ExtResource("9_d5pkl")]
@@ -1595,5 +1633,6 @@ position = Vector2(136, -19)
 [node name="firefly12" parent="fireflies" instance=ExtResource("9_d5pkl")]
 position = Vector2(92, 43)
 
+[connection signal="pressed" from="CanvasLayer/exit" to="." method="_on_exit_pressed"]
 [connection signal="animation_started" from="Fade/AnimationPlayer" to="." method="_on_animation_player_animation_started"]
 [connection signal="ready" from="Fade/AnimationPlayer" to="." method="_on_animation_player_ready"]

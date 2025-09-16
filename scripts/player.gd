@@ -45,7 +45,3 @@ func _physics_process(_delta: float) -> void:
 	# Movimento com velocidade realista
 	velocity = direction.normalized() * speed if direction != Vector2.ZERO else Vector2.ZERO
 	move_and_slide()
-
-
-func _on_exit_pressed() -> void:
-	get_tree().quit()
