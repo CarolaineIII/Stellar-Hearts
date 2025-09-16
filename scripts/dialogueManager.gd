@@ -5,7 +5,7 @@ signal dialogue_finished  # avisa o Player quando terminar
 @export var dialogues: Array[Array] = [
 	["Uh, estou muito cansado.", "Preciso encontrar um abrigo...", "Algum..."],
 	["Está muito escuro, e frio.", "Melhor seguir em frente."],
-	["Não tem nada opr aqui.", "Preciso explorar", "E achar um lugar pra descansar."]
+	["Não tem nada por aqui.", "Preciso explorar", "E achar um lugar pra descansar."]
 ]
 
 var active: bool = false
