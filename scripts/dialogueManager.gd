@@ -3,9 +3,9 @@ extends CanvasLayer
 signal dialogue_finished  # avisa o Player quando terminar
 
 @export var dialogues: Array[Array] = [
-	["Onde estou?", "Preciso observar a área.", "preciso continuar"],
-	["Esse lugar é suspeito.", "Melhor seguir em frente."],
-	["Cheguei ao fim da trilha.", "Vamos começar de verdade!"]
+	["Uh, estou muito cansado.", "Preciso encontrar um abrigo...", "Algum..."],
+	["Está muito escuro, e frio.", "Melhor seguir em frente."],
+	["Não tem nada opr aqui.", "Preciso explorar", "E achar um lugar pra descansar."]
 ]
 
 var active: bool = false
