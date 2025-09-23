@@ -131,7 +131,7 @@ region = Rect2(1, 129, 14, 14)
 atlas = ExtResource("3_ikx4k")
 region = Rect2(17, 130, 14, 13)
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 2
 script = ExtResource("2_6k5nk")
 

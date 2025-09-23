@@ -21,6 +21,7 @@ window/stretch/mode="canvas_items"
 [global_group]
 
 ui=""
+player=""
 
 [input]
 
