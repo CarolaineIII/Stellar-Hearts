@@ -3,6 +3,8 @@ extends CharacterBody2D
 var speed = 120  # valores realistas para Godot: entre 100 e 200
 var direction = Vector2.ZERO
 
+var interacao 
+
 @onready var _animated_sprite = $AnimatedSprite2D
 
 func _physics_process(_delta: float) -> void:
