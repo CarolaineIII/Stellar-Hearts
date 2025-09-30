@@ -18,6 +18,15 @@ config/features=PackedStringArray("4.4", "Forward Plus")
 
 window/stretch/mode="canvas_items"
 
+[file_customization]
+
+folder_colors={
+"res://Assets/": "red",
+"res://cenas/": "green",
+"res://instanciaveis/": "purple",
+"res://scripts/": "orange"
+}
+
 [global_group]
 
 ui=""

@@ -1,8 +1,8 @@
 [gd_scene load_steps=21 format=4 uid="uid://5h5g7alrtya5"]
 
 [ext_resource type="Script" uid="uid://bh6iecugafx0p" path="res://scripts/world.gd" id="1_xinj7"]
-[ext_resource type="Texture2D" uid="uid://csrduemqx84c0" path="res://topdown/mana seed seasonal forest sample (summer)/seasonal sample (summer).png" id="2_8dw4w"]
-[ext_resource type="Texture2D" uid="uid://c47kl877ahkcw" path="res://topdown/UiCozyFree.png/UiCozyFree.png" id="2_a8hyk"]
+[ext_resource type="Texture2D" uid="uid://csrduemqx84c0" path="res://Assets/Sprites/mana seed seasonal forest sample (summer)/seasonal sample (summer).png" id="2_8dw4w"]
+[ext_resource type="Texture2D" uid="uid://c47kl877ahkcw" path="res://Assets/Sprites/UiCozyFree.png/UiCozyFree.png" id="2_a8hyk"]
 [ext_resource type="PackedScene" uid="uid://cq7w64orof780" path="res://instanciaveis/player.tscn" id="3_8ug67"]
 [ext_resource type="Script" uid="uid://dtqy7dbbo3oy3" path="res://scripts/cutscenePlayer.gd" id="4_8ug67"]
 [ext_resource type="PackedScene" uid="uid://c27s5xqgkr4xq" path="res://instanciaveis/firefly.tscn" id="4_a8hyk"]

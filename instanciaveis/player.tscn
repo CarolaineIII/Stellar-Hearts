@@ -1,8 +1,8 @@
 [gd_scene load_steps=20 format=3 uid="uid://cq7w64orof780"]
 
-[ext_resource type="Texture2D" uid="uid://bqsscgqrikp6j" path="res://topdown/CatRecolors1.png" id="1_7u53d"]
+[ext_resource type="Texture2D" uid="uid://bqsscgqrikp6j" path="res://Assets/Sprites/CatRecolors1.png" id="1_7u53d"]
 [ext_resource type="Script" uid="uid://dkwt67bt580xr" path="res://scripts/player.gd" id="2_6k5nk"]
-[ext_resource type="Texture2D" uid="uid://c47kl877ahkcw" path="res://topdown/UiCozyFree.png/UiCozyFree.png" id="3_ikx4k"]
+[ext_resource type="Texture2D" uid="uid://c47kl877ahkcw" path="res://Assets/Sprites/UiCozyFree.png/UiCozyFree.png" id="3_ikx4k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ksnjo"]
 atlas = ExtResource("1_7u53d")
@@ -147,8 +147,9 @@ color = Color(0, 0, 0, 0.407843)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_fqpvm")
-animation = &"Idle"
+animation = &"walk"
 autoplay = "Idle"
+frame_progress = 0.273067
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 11)
