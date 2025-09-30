@@ -1158,6 +1158,57 @@ position = Vector2(136, -19)
 [node name="firefly12" parent="fireflies" instance=ExtResource("4_a8hyk")]
 position = Vector2(92, 43)
 
+[node name="firefly13" parent="fireflies" instance=ExtResource("4_a8hyk")]
+position = Vector2(1487, -91)
+
+[node name="firefly14" parent="fireflies" instance=ExtResource("4_a8hyk")]
+position = Vector2(930, -56)
+
+[node name="firefly15" parent="fireflies" instance=ExtResource("4_a8hyk")]
+position = Vector2(646, -179)
+
+[node name="firefly16" parent="fireflies" instance=ExtResource("4_a8hyk")]
+position = Vector2(770, 30)
+
+[node name="firefly17" parent="fireflies" instance=ExtResource("4_a8hyk")]
+position = Vector2(771, -90)
+
+[node name="firefly18" parent="fireflies" instance=ExtResource("4_a8hyk")]
+position = Vector2(609, 35)
+
+[node name="firefly19" parent="fireflies" instance=ExtResource("4_a8hyk")]
+position = Vector2(795, -180)
+
+[node name="firefly20" parent="fireflies" instance=ExtResource("4_a8hyk")]
+position = Vector2(415, -21)
+
+[node name="firefly21" parent="fireflies" instance=ExtResource("4_a8hyk")]
+position = Vector2(541, -57)
+
+[node name="firefly22" parent="fireflies" instance=ExtResource("4_a8hyk")]
+position = Vector2(464, 88)
+
+[node name="firefly23" parent="fireflies" instance=ExtResource("4_a8hyk")]
+position = Vector2(854, -51)
+
+[node name="firefly24" parent="fireflies" instance=ExtResource("4_a8hyk")]
+position = Vector2(1092, 30)
+
+[node name="firefly25" parent="fireflies" instance=ExtResource("4_a8hyk")]
+position = Vector2(952, -173)
+
+[node name="firefly26" parent="fireflies" instance=ExtResource("4_a8hyk")]
+position = Vector2(1006, 94)
+
+[node name="firefly27" parent="fireflies" instance=ExtResource("4_a8hyk")]
+position = Vector2(1007, -26)
+
+[node name="firefly28" parent="fireflies" instance=ExtResource("4_a8hyk")]
+position = Vector2(874, -62)
+
+[node name="firefly29" parent="fireflies" instance=ExtResource("4_a8hyk")]
+position = Vector2(1031, -116)
+
 [node name="waypoints" type="Node2D" parent="."]
 
 [node name="point1" type="Marker2D" parent="waypoints"]
