@@ -18,6 +18,7 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	if moving:
 		_move_to_target()
+		_play_walk_anim()
 	else:
 		_play_idle()
 
@@ -31,16 +32,17 @@ func _move_to_target() -> void:
 	var pos := global_position
 	if abs(pos.x - target_position.x) > 2:
 		velocity = Vector2(sign(target_position.x - pos.x) * speed, 0)
-	#elif abs(pos.y - target_position.y) > 2:
-		#velocity = Vector2(0, sign(target_position.y - pos.y) * speed)
+	elif abs(pos.y - target_position.y) > 2:
+		velocity = Vector2(0, sign(target_position.y - pos.y) * speed)
 	else:
 		velocity = Vector2.ZERO
 		moving = false
 		await get_tree().create_timer(1.0).timeout
 		if ui:
+			moving = false
 			ui.start_dialogue(current_index)
 	move_and_slide()
-	_play_walk_anim()
+	
 
 func _play_walk_anim() -> void:
 	if velocity.x > 0:
@@ -70,7 +72,7 @@ func next_point() -> void:
 	current_index += 1
 	if current_index < waypoints.size():
 		_set_target_from_index()
-		moving = true
+		
 	else:
 		get_tree().change_scene_to_file("res://cenas/world.tscn")
 		print("O jogo comecou")

@@ -1460,10 +1460,10 @@ position = Vector2(874, -62)
 position = Vector2(1031, -116)
 
 [node name="waypoints" type="Node2D" parent="."]
-position = Vector2(826, -138)
+position = Vector2(828, -138)
 
 [node name="point1" type="Marker2D" parent="waypoints"]
-position = Vector2(-13, 0)
+position = Vector2(0, 1)
 
 [node name="UI" type="CanvasLayer" parent="." groups=["ui"]]
 script = ExtResource("8_q7np0")
