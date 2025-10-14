@@ -131,6 +131,7 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, 11)
 scale = Vector2(1.5, 1)
 shape = SubResource("RectangleShape2D_ivqwt")

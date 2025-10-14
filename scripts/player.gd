@@ -10,15 +10,17 @@ var interacao
 func _physics_process(_delta: float) -> void:
 	direction = Vector2.ZERO
 
+	if Gm.podemovimentar == true:
 	# Coleta de entradas com prioridade (horizontal > vertical)
-	if Input.is_action_pressed("right"):
-		direction.x = 1
-	elif Input.is_action_pressed("left"):
-		direction.x = -1
-	elif Input.is_action_pressed("down"):
-		direction.y = 1
-	elif Input.is_action_pressed("up"):
-		direction.y = -1
+		if Input.is_action_pressed("right"):
+			direction.x = 1
+		elif Input.is_action_pressed("left"):
+			direction.x = -1
+		elif Input.is_action_pressed("down"):
+			direction.y = 1
+		elif Input.is_action_pressed("up"):
+			direction.y = -1
+			
 
 
 #Animações
@@ -47,3 +49,5 @@ func _physics_process(_delta: float) -> void:
 	# Movimento com velocidade realista
 	velocity = direction.normalized() * speed if direction != Vector2.ZERO else Vector2.ZERO
 	move_and_slide()
+	
+	

@@ -16,6 +16,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if interacao == true and Input.is_action_just_pressed("interact"):
 		tronco.play("TroncoComGato")
+		Gm.podemovimentar = false
 		textoInteracao.visible = false
 		player.visible = false
 		camera.zoom = Vector2(2,2)

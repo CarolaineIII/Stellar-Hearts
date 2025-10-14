@@ -11,15 +11,17 @@ var target_position: Vector2
 @onready var ui = get_tree().get_first_node_in_group("ui")  # garanta que o UI está no grupo "ui"
 
 func _ready() -> void:
+	#Habilita o flip do personagem para a esquerda
+	#_animated_sprite.flip_h = true
 	if ui:
 		ui.dialogue_finished.connect(_on_dialogue_finished)
 	_set_target_from_index()
 
-func _physics_process(_delta: float) -> void:
-	if moving:
-		_move_to_target()
-	else:
-		_play_idle()
+#func _physics_process(_delta: float) -> void:
+	#if moving:
+		#_move_to_target()
+	#else:
+		#_play_idle()
 
 func _set_target_from_index() -> void:
 	if current_index < waypoints.size():
@@ -27,20 +29,20 @@ func _set_target_from_index() -> void:
 		if point:
 			target_position = point.global_position
 
-func _move_to_target() -> void:
-	var pos := global_position
-	if abs(pos.x - target_position.x) > 2:
-		velocity = Vector2(sign(target_position.x - pos.x) * speed, 0)
+#func _move_to_target() -> void:
+	#var pos := global_position
+	#if abs(pos.x - target_position.x) > 2:
+		#velocity = Vector2(sign(target_position.x - pos.x) * speed, 0)
 	#elif abs(pos.y - target_position.y) > 2:
 		#velocity = Vector2(0, sign(target_position.y - pos.y) * speed)
-	else:
-		velocity = Vector2.ZERO
-		moving = false
-		await get_tree().create_timer(1.0).timeout
-		if ui:
-			ui.start_dialogue(current_index)
-	move_and_slide()
-	_play_walk_anim()
+	#else:
+		#velocity = Vector2.ZERO
+		#moving = false
+		#await get_tree().create_timer(1.0).timeout
+		#if ui:
+			#ui.start_dialogue(current_index)
+	#move_and_slide()
+	#_play_walk_anim()
 
 func _play_walk_anim() -> void:
 	if velocity.x > 0:
