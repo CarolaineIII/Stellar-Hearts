@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://cb8opflvu6ws4" path="res://Assets/Sprites/fireflies/New_Piskel-1.png_3.png" id="1_yvvuc"]
 [ext_resource type="Texture2D" uid="uid://b2nev5lg6rs0a" path="res://Assets/Sprites/fireflies/New_Piskel-1.png_5.png" id="3_tb4wy"]
 
-
 [node name="firefly" type="Node2D"]
 script = ExtResource("1_b6sfm")
 

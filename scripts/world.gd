@@ -3,7 +3,7 @@ extends Node2D
 @onready var textoInteracao = $textoInteracao
 @onready var anim = $Fade/AnimationPlayer
 var interacao = false
-@onready var tronco = $Tronco
+@onready var tronco = $TileMap/Tronco
 var player
 @onready var camera = $player/Camera2D
 # Called when the node enters the scene tree for the first time.
