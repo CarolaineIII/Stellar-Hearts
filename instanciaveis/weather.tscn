@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://btwtkpssac2vk"]
+
+[ext_resource type="Texture2D" uid="uid://blwu0tetm7hw4" path="res://Assets/Sprites/Rain/Rain.png" id="1_twmm8"]
+
+[sub_resource type="Curve" id="Curve_a6s81"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.52381, 0.747171), -1.70858, -1.70858, 0, 0, Vector2(0.996191, 0.51273), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_j7cc2"]
+curve = SubResource("Curve_a6s81")
+
+[sub_resource type="Gradient" id="Gradient_p4w5v"]
+offsets = PackedFloat32Array(0, 0.00200401, 0.581162)
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 1, 0.947896, 0.947896, 0.947896, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wmji0"]
+gradient = SubResource("Gradient_p4w5v")
+
+[sub_resource type="Curve" id="Curve_ff5c5"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.579048, 0.636846), -1.69829, -1.69829, 0, 0, Vector2(1, 0.112801), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_n5nj8"]
+curve = SubResource("Curve_ff5c5")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5w0bi"]
+particle_flag_disable_z = true
+direction = Vector3(-1, 1, 0)
+spread = 26.155
+initial_velocity_min = 64.8
+initial_velocity_max = 335.88
+gravity = Vector3(0, 98, 0)
+scale_curve = SubResource("CurveTexture_n5nj8")
+color_ramp = SubResource("GradientTexture1D_wmji0")
+alpha_curve = SubResource("CurveTexture_j7cc2")
+
+[node name="Weather" type="Node2D"]
+
+[node name="Rain" type="GPUParticles2D" parent="."]
+visible = false
+position = Vector2(-3, -1)
+scale = Vector2(3, 3)
+amount = 50
+texture = ExtResource("1_twmm8")
+process_material = SubResource("ParticleProcessMaterial_5w0bi")
+
+[node name="RainParticles" type="CPUParticles2D" parent="."]
+amount = 200
+texture = ExtResource("1_twmm8")
+lifetime = 1.25
+emission_shape = 3
+emission_rect_extents = Vector2(1000, 1)
+gravity = Vector2(-600, 980)
+scale_amount_min = 0.5
+scale_amount_max = 0.5
