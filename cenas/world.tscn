@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bj6d34181uq3q" path="res://Assets/Sprites/TroncoComGato.png" id="6_21bsp"]
 [ext_resource type="Texture2D" uid="uid://b8j4u6r3xfglb" path="res://Assets/Sprites/Tronco Sem Gato.png" id="7_kdgld"]
 [ext_resource type="PackedScene" uid="uid://c27s5xqgkr4xq" path="res://instanciaveis/firefly.tscn" id="9_d5pkl"]
-[ext_resource type="PackedScene" path="res://instanciaveis/weather.tscn" id="9_ysbnw"]
+[ext_resource type="PackedScene" uid="uid://btwtkpssac2vk" path="res://instanciaveis/weather.tscn" id="9_ysbnw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_21bsp"]
 atlas = ExtResource("2_xnx65")
