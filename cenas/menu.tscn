@@ -1,11 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://cr35raqjsg4gi"]
+[gd_scene load_steps=16 format=3 uid="uid://cr35raqjsg4gi"]
 
 [ext_resource type="Texture2D" uid="uid://c47kl877ahkcw" path="res://Assets/Sprites/UiCozyFree.png/UiCozyFree.png" id="1_64url"]
 [ext_resource type="Texture2D" uid="uid://d3rd68t0io7s4" path="res://Assets/Sprites/UiCozyFree.png/Captura de tela 2025-06-03 111752.png" id="1_hsu4v"]
 [ext_resource type="Script" uid="uid://fdvvmq37s35s" path="res://scripts/menu.gd" id="1_mmoso"]
 [ext_resource type="Texture2D" uid="uid://bnmotomdh7fqu" path="res://Assets/Sprites/Grunge-textures-vintage-background-vectors-04.png" id="2_mmoso"]
 [ext_resource type="Texture2D" uid="uid://b3vk1jjtpfd8d" path="res://Assets/Sprites/TITLE - Copia.png" id="5_qvcyk"]
-[ext_resource type="PackedScene" uid="uid://dlg38opseay86" path="res://instanciaveis/bot.tscn" id="6_nxpqr"]
 
 [sub_resource type="Animation" id="Animation_qvcyk"]
 length = 0.001
@@ -360,8 +359,6 @@ texture = SubResource("AtlasTexture_nxpqr")
 position = Vector2(574, 276)
 scale = Vector2(6.9375, 6.9375)
 texture = SubResource("AtlasTexture_qcnrj")
-
-[node name="bot" parent="." instance=ExtResource("6_nxpqr")]
 
 [connection signal="animation_finished" from="Fade/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]

@@ -47,7 +47,7 @@ process_material = SubResource("ParticleProcessMaterial_5w0bi")
 [node name="RainParticles" type="CPUParticles2D" parent="."]
 amount = 200
 texture = ExtResource("1_twmm8")
-lifetime = 1.25
+lifetime = 1.42
 emission_shape = 3
 emission_rect_extents = Vector2(1000, 1)
 gravity = Vector2(-600, 980)
