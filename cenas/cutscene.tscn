@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://5h5g7alrtya5"]
+[gd_scene load_steps=29 format=4 uid="uid://5h5g7alrtya5"]
 
 [ext_resource type="Script" uid="uid://bh6iecugafx0p" path="res://scripts/world.gd" id="1_xinj7"]
 [ext_resource type="Texture2D" uid="uid://csrduemqx84c0" path="res://Assets/Sprites/mana seed seasonal forest sample (summer)/seasonal sample (summer).png" id="2_8dw4w"]
@@ -9,6 +9,59 @@
 [ext_resource type="PackedScene" uid="uid://c27s5xqgkr4xq" path="res://instanciaveis/firefly.tscn" id="4_a8hyk"]
 [ext_resource type="Texture2D" uid="uid://b8j4u6r3xfglb" path="res://Assets/Sprites/Tronco Sem Gato.png" id="4_g124w"]
 [ext_resource type="Script" uid="uid://dixo4ypb441cb" path="res://scripts/dialogueManager.gd" id="6_8ug67"]
+[ext_resource type="PackedScene" uid="uid://btwtkpssac2vk" path="res://instanciaveis/weather.tscn" id="10_g124w"]
+
+[sub_resource type="Animation" id="Animation_xnx65"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_8mpgf"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_g124w"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_21bsp"]
+_data = {
+&"RESET": SubResource("Animation_xnx65"),
+&"fade_in": SubResource("Animation_8mpgf"),
+&"fade_out": SubResource("Animation_g124w")
+}
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0s5xy"]
 texture = ExtResource("2_8dw4w")
@@ -1248,44 +1301,29 @@ region = Rect2(1, 129, 14, 14)
 atlas = ExtResource("2_a8hyk")
 region = Rect2(17, 130, 14, 13)
 
-[sub_resource type="Animation" id="Animation_xnx65"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_8mpgf"]
-resource_name = "fade_in"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_21bsp"]
-_data = {
-&"RESET": SubResource("Animation_xnx65"),
-&"fade_in": SubResource("Animation_8mpgf")
-}
-
 [node name="world" type="Node2D"]
 script = ExtResource("1_xinj7")
+
+[node name="Fade" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Fade"]
+z_index = 9
+layout_mode = 0
+offset_left = -591.0
+offset_top = -362.0
+offset_right = 911.0
+offset_bottom = 405.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Fade"]
+libraries = {
+&"": SubResource("AnimationLibrary_21bsp")
+}
 
 [node name="TileMap" type="Node2D" parent="."]
 
@@ -1498,28 +1536,13 @@ texture_normal = SubResource("AtlasTexture_nl86i")
 texture_pressed = SubResource("AtlasTexture_pura2")
 stretch_mode = 0
 
-[node name="Fade" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-metadata/_edit_use_anchors_ = true
+[node name="Timer" type="Timer" parent="."]
+autostart = true
 
-[node name="ColorRect" type="ColorRect" parent="Fade"]
-visible = false
-z_index = 9
-layout_mode = 0
-offset_left = -591.0
-offset_top = -362.0
-offset_right = 702.0
-offset_bottom = 372.0
-color = Color(0, 0, 0, 1)
+[node name="Weather" parent="." instance=ExtResource("10_g124w")]
+position = Vector2(797, -419)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Fade"]
-libraries = {
-&"": SubResource("AnimationLibrary_21bsp")
-}
-
-[connection signal="pressed" from="CanvasLayer/exit" to="." method="_on_exit_pressed"]
 [connection signal="animation_started" from="Fade/AnimationPlayer" to="." method="_on_animation_player_animation_started"]
 [connection signal="ready" from="Fade/AnimationPlayer" to="." method="_on_animation_player_ready"]
+[connection signal="pressed" from="CanvasLayer/exit" to="." method="_on_exit_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

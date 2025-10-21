@@ -72,8 +72,9 @@ func next_point() -> void:
 		_set_target_from_index()
 		moving = true
 	else:
-		get_tree().change_scene_to_file("res://cenas/world.tscn")
+		Gm.CutToWorld = true
 		print("O jogo comecou")
+		
 		print(moving)
 		
 func _on_exit_pressed() -> void:
