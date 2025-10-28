@@ -3,9 +3,10 @@ extends CanvasLayer
 signal dialogue_finished  # avisa o Player quando terminar
 
 @export var dialogues: Array[Array] = [
-	["O gato bot fala agora", "Preciso encontrar um abrigo...", "Algum..."],
-	["Está muito escuro, e frio.", "Melhor seguir em frente."],
-	["Não tem nada por aqui.", "Preciso explorar", "E achar um lugar pra descansar."]
+	["???: Com licença?", "Cauda de Esquivo: Uh? AAH! Q-Qqq-quem -é v-v-vvvo-cc-cê?", "???: Acalme-se! Só vim lhe ajudar. Está todo quebrantado e largado, decidi fazer algo  a respeito."],
+	["Está muito escuro, e frio.", "Melhor seguir em frente.", "Está muito escuro, e frio.", "Melhor seguir em frente.", "Está muito escuro, e frio.", "Melhor seguir em frente.", "Está muito escuro, e frio.", "Melhor seguir em frente.",],
+	["Não tem nada por aqui.", "Preciso explorar", "E achar um lugar pra descansar."],
+	
 ]
 
 var active: bool = false
