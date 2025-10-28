@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d3rd68t0io7s4" path="res://Assets/Sprites/UiCozyFree.png/Captura de tela 2025-06-03 111752.png" id="1_hsu4v"]
 [ext_resource type="Script" uid="uid://fdvvmq37s35s" path="res://scripts/menu.gd" id="1_mmoso"]
 [ext_resource type="Texture2D" uid="uid://bnmotomdh7fqu" path="res://Assets/Sprites/Grunge-textures-vintage-background-vectors-04.png" id="2_mmoso"]
+[ext_resource type="Animation" uid="uid://cqmht3ppmc2av" path="res://cenas/fade_out.res" id="2_nxpqr"]
 [ext_resource type="Texture2D" uid="uid://b3vk1jjtpfd8d" path="res://Assets/Sprites/TITLE - Copia.png" id="5_qvcyk"]
 
 [sub_resource type="Animation" id="Animation_qvcyk"]
@@ -21,25 +22,10 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_mmoso"]
-resource_name = "fade_out"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nxpqr"]
 _data = {
 &"RESET": SubResource("Animation_qvcyk"),
-&"fade_out": SubResource("Animation_mmoso")
+&"fade_out": ExtResource("2_nxpqr")
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_64url"]
