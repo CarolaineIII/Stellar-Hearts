@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://bhls8570kuj70"]
+[gd_scene load_steps=29 format=4 uid="uid://bhls8570kuj70"]
 
 [ext_resource type="Script" uid="uid://bh6iecugafx0p" path="res://scripts/world.gd" id="1_yb5ho"]
 [ext_resource type="PackedScene" uid="uid://cq7w64orof780" path="res://instanciaveis/player.tscn" id="2_mjon1"]
@@ -9,6 +9,58 @@
 [ext_resource type="Texture2D" uid="uid://b8j4u6r3xfglb" path="res://Assets/Sprites/Tronco Sem Gato.png" id="7_kdgld"]
 [ext_resource type="PackedScene" uid="uid://c27s5xqgkr4xq" path="res://instanciaveis/firefly.tscn" id="9_d5pkl"]
 [ext_resource type="PackedScene" uid="uid://btwtkpssac2vk" path="res://instanciaveis/weather.tscn" id="9_ysbnw"]
+
+[sub_resource type="Animation" id="Animation_xnx65"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_8mpgf"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_d5pkl"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_21bsp"]
+_data = {
+&"RESET": SubResource("Animation_xnx65"),
+&"fade_in": SubResource("Animation_8mpgf"),
+&"fade_out": SubResource("Animation_d5pkl")
+}
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_21bsp"]
 atlas = ExtResource("2_xnx65")
@@ -1250,59 +1302,44 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8mpgf"]
 
-[sub_resource type="Animation" id="Animation_xnx65"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_8mpgf"]
-resource_name = "fade_in"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_21bsp"]
-_data = {
-&"RESET": SubResource("Animation_xnx65"),
-&"fade_in": SubResource("Animation_8mpgf")
-}
-
 [node name="world" type="Node2D"]
 script = ExtResource("1_yb5ho")
 metadata/_edit_horizontal_guides_ = [-368.0]
+
+[node name="Fade" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect2" type="ColorRect" parent="Fade"]
+visible = false
+z_index = 11
+offset_left = -619.0
+offset_top = -367.0
+offset_right = 1480.0
+offset_bottom = 404.0
+color = Color(0, 0, 0, 0.407843)
+
+[node name="ColorRect" type="ColorRect" parent="Fade"]
+z_index = 9
+layout_mode = 0
+offset_left = -591.0
+offset_top = -362.0
+offset_right = 1483.0
+offset_bottom = 376.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Fade"]
+libraries = {
+&"": SubResource("AnimationLibrary_21bsp")
+}
 
 [node name="Weather" parent="." instance=ExtResource("9_ysbnw")]
 z_index = 30
 position = Vector2(586, -413)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-z_index = 11
-offset_left = -11.0
-offset_top = -18.0
-offset_right = 1186.0
-offset_bottom = 687.0
-color = Color(0, 0, 0, 0.407843)
 
 [node name="exit" type="TextureButton" parent="CanvasLayer"]
 z_index = 100
@@ -1546,29 +1583,13 @@ position = Vector2(933, -144)
 shape = SubResource("RectangleShape2D_8mpgf")
 debug_color = Color(0.999208, 0, 0.120354, 0.42)
 
-[node name="Fade" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
 
-[node name="ColorRect" type="ColorRect" parent="Fade"]
-visible = false
-z_index = 9
-layout_mode = 0
-offset_left = -591.0
-offset_top = -362.0
-offset_right = 702.0
-offset_bottom = 372.0
-color = Color(0, 0, 0, 1)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Fade"]
-libraries = {
-&"": SubResource("AnimationLibrary_21bsp")
-}
-
+[connection signal="animation_started" from="Fade/AnimationPlayer" to="." method="_on_animation_player_animation_started"]
+[connection signal="ready" from="Fade/AnimationPlayer" to="." method="_on_animation_player_ready"]
 [connection signal="pressed" from="CanvasLayer/exit" to="." method="_on_exit_pressed"]
 [connection signal="body_entered" from="interacao" to="." method="_on_interacao_body_entered"]
 [connection signal="body_exited" from="interacao" to="." method="_on_interacao_body_exited"]
-[connection signal="animation_started" from="Fade/AnimationPlayer" to="." method="_on_animation_player_animation_started"]
-[connection signal="ready" from="Fade/AnimationPlayer" to="." method="_on_animation_player_ready"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

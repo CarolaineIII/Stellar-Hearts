@@ -15,27 +15,32 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	
 	if interacao == true and Input.is_action_just_pressed("interact"):
 		
 		tronco.play("TroncoComGato")
-		await get_tree().create_timer(1.0).timeout
+		#await get_tree().create_timer(1.0).timeout
 		
 		Gm.podemovimentar = false
 		textoInteracao.visible = false
 		player.visible = false
 		camera.zoom = Vector2(2,2)
 		estanotronco = true
-		
-	if estanotronco == true and Input.is_action_just_pressed("interact"):
-		print("Foi")
-		get_tree().change_scene_to_file("res://cenas/cutscene2.tscn")
-		#player.position = Vector2(1040, -70)
-	if Gm.CutToWorld == true:
-		
-		anim.play("fade_out")
+		await get_tree().create_timer(3.0).timeout
+		anim.play("fade_in")
 		await get_tree().create_timer(1.0).timeout
-		Gm.CutToWorld = false
-		get_tree().change_scene_to_file("res://cenas/world.tscn")
+		get_tree().change_scene_to_file("res://cenas/cutscene2.tscn")
+		
+	#if estanotronco == true and Input.is_action_just_pressed("interact"):
+		#print("Foi")
+		
+		#player.position = Vector2(1040, -70)
+	#if Gm.CutToWorld == true:
+		#
+		#anim.play("fade_out")
+		#await get_tree().create_timer(1.0).timeout
+		#Gm.CutToWorld = false
+		#get_tree().change_scene_to_file("res://cenas/world.tscn")
 		
 		
 func _on_exit_pressed() -> void:
@@ -60,4 +65,4 @@ func _on_animation_player_animation_started(anim_name: StringName) -> void:
 
 
 func _on_timer_timeout() -> void:
-	pass # Replace with function body.
+	pass
