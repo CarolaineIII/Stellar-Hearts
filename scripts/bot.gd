@@ -74,7 +74,7 @@ func next_point() -> void:
 		_set_target_from_index()
 		
 	else:
-		Gm.Cut2ToHome = true
+		Gm.Cut2ToWorld2 = true
 		print("O jogo comecou")
 		print(moving)
 		

@@ -6,6 +6,7 @@ var interacao = false
 @onready var tronco = $TileMap/Tronco
 var player
 @onready var camera = $player/Camera2D
+var estanotronco = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	anim.play("fade_in")
@@ -23,6 +24,11 @@ func _process(_delta: float) -> void:
 		textoInteracao.visible = false
 		player.visible = false
 		camera.zoom = Vector2(2,2)
+		estanotronco = true
+		
+	if estanotronco == true and Input.is_action_just_pressed("interact"):
+		print("Foi")
+		get_tree().change_scene_to_file("res://cenas/cutscene2.tscn")
 		#player.position = Vector2(1040, -70)
 	if Gm.CutToWorld == true:
 		

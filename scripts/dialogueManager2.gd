@@ -2,10 +2,11 @@ extends CanvasLayer
 
 signal dialogue_finished  # avisa o Player quando terminar
 
+#Alterar textos atraves do inspector da UI (Item dialogues)
 @export var dialogues: Array[Array] = [
-	["???: Com licença?", "Cauda de Esquivo: Uh? AAH! Q-Qqq-quem -é v-v-vvvo-cc-cê?", "???: Acalme-se! Só vim lhe ajudar. Está todo quebrantado e largado, decidi fazer algo  a respeito."],
-	["Está muito escuro, e frio.", "Melhor seguir em frente.", "Está muito escuro, e frio.", "Melhor seguir em frente.", "Está muito escuro, e frio.", "Melhor seguir em frente.", "Está muito escuro, e frio.", "Melhor seguir em frente.",],
-	["Não tem nada por aqui.", "Preciso explorar", "E achar um lugar pra descansar."],
+	["???: Com licença?", "Cauda de Esquivo: Uh? AAH! Q-Qqq-quem -é v-v-vvvo-cc-cê?"],
+	["Está muito escuro, e frio.", "Melhor seguir em frente.", "Está muito escuro, e frio"],
+	["Não tem nada por aqui.", "Preciso explorar", "E achar um lugar pra descansar."], 
 	
 ]
 

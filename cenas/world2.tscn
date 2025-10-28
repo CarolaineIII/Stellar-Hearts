@@ -1,18 +1,17 @@
-[gd_scene load_steps=28 format=4 uid="uid://d2475yoefisbd"]
+[gd_scene load_steps=27 format=4 uid="uid://d03o5dhn3g33v"]
 
-[ext_resource type="Script" uid="uid://bh6iecugafx0p" path="res://scripts/world.gd" id="1_bxpnh"]
-[ext_resource type="Texture2D" uid="uid://csrduemqx84c0" path="res://Assets/Sprites/mana seed seasonal forest sample (summer)/seasonal sample (summer).png" id="2_q7np0"]
-[ext_resource type="Texture2D" uid="uid://bj6d34181uq3q" path="res://Assets/Sprites/TroncoComGato.png" id="3_lgjbf"]
-[ext_resource type="Texture2D" uid="uid://b8j4u6r3xfglb" path="res://Assets/Sprites/Tronco Sem Gato.png" id="4_o7sqe"]
-[ext_resource type="PackedScene" uid="uid://cq7w64orof780" path="res://instanciaveis/player.tscn" id="5_kxtq1"]
-[ext_resource type="Script" uid="uid://blubjxwf301wb" path="res://scripts/cutscenePlayer2.gd" id="6_bxpnh"]
-[ext_resource type="PackedScene" uid="uid://c27s5xqgkr4xq" path="res://instanciaveis/firefly.tscn" id="7_fp4h5"]
-[ext_resource type="Script" uid="uid://de2blxujp10ll" path="res://scripts/dialogueManager2.gd" id="8_q7np0"]
-[ext_resource type="Texture2D" uid="uid://c47kl877ahkcw" path="res://Assets/Sprites/UiCozyFree.png/UiCozyFree.png" id="9_rlduu"]
-[ext_resource type="PackedScene" uid="uid://dlg38opseay86" path="res://instanciaveis/bot.tscn" id="10_q7np0"]
+[ext_resource type="Script" uid="uid://bh6iecugafx0p" path="res://scripts/world.gd" id="1_hhn1e"]
+[ext_resource type="Texture2D" uid="uid://csrduemqx84c0" path="res://Assets/Sprites/mana seed seasonal forest sample (summer)/seasonal sample (summer).png" id="2_rcfoi"]
+[ext_resource type="Texture2D" uid="uid://bj6d34181uq3q" path="res://Assets/Sprites/TroncoComGato.png" id="3_dkvso"]
+[ext_resource type="Texture2D" uid="uid://b8j4u6r3xfglb" path="res://Assets/Sprites/Tronco Sem Gato.png" id="4_1vbbs"]
+[ext_resource type="PackedScene" uid="uid://cq7w64orof780" path="res://instanciaveis/player.tscn" id="5_iqbe2"]
+[ext_resource type="PackedScene" uid="uid://c27s5xqgkr4xq" path="res://instanciaveis/firefly.tscn" id="7_tcv8n"]
+[ext_resource type="Script" uid="uid://de2blxujp10ll" path="res://scripts/dialogueManager2.gd" id="8_r702s"]
+[ext_resource type="Texture2D" uid="uid://c47kl877ahkcw" path="res://Assets/Sprites/UiCozyFree.png/UiCozyFree.png" id="9_b80ij"]
+[ext_resource type="PackedScene" uid="uid://dlg38opseay86" path="res://instanciaveis/bot.tscn" id="10_yk4xt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0s5xy"]
-texture = ExtResource("2_q7np0")
+texture = ExtResource("2_rcfoi")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -243,7 +242,7 @@ texture = ExtResource("2_q7np0")
 sources/0 = SubResource("TileSetAtlasSource_0s5xy")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g6cgg"]
-texture = ExtResource("2_q7np0")
+texture = ExtResource("2_rcfoi")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -478,7 +477,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_g6cgg")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i8rgc"]
-texture = ExtResource("2_q7np0")
+texture = ExtResource("2_rcfoi")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -714,7 +713,7 @@ sources/0 = SubResource("TileSetAtlasSource_i8rgc")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_itdkv"]
 resource_name = "Tiles para o Rio"
-texture = ExtResource("2_q7np0")
+texture = ExtResource("2_rcfoi")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -945,7 +944,7 @@ texture = ExtResource("2_q7np0")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qoblu"]
 resource_name = "Agua Animada"
-texture = ExtResource("2_q7np0")
+texture = ExtResource("2_rcfoi")
 11:13/animation_columns = 3
 11:13/animation_speed = 3.0
 11:13/animation_mode = 1
@@ -960,7 +959,7 @@ sources/0 = SubResource("TileSetAtlasSource_itdkv")
 sources/1 = SubResource("TileSetAtlasSource_qoblu")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_45dng"]
-texture = ExtResource("2_q7np0")
+texture = ExtResource("2_rcfoi")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -1226,7 +1225,7 @@ sources/0 = SubResource("TileSetAtlasSource_45dng")
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_lgjbf")
+"texture": ExtResource("3_dkvso")
 }],
 "loop": true,
 "name": &"TroncoComGato",
@@ -1234,7 +1233,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_o7sqe")
+"texture": ExtResource("4_1vbbs")
 }],
 "loop": true,
 "name": &"TroncoSemGato",
@@ -1242,11 +1241,11 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nl86i"]
-atlas = ExtResource("9_rlduu")
+atlas = ExtResource("9_b80ij")
 region = Rect2(1, 129, 14, 14)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pura2"]
-atlas = ExtResource("9_rlduu")
+atlas = ExtResource("9_b80ij")
 region = Rect2(17, 130, 14, 13)
 
 [sub_resource type="Animation" id="Animation_xnx65"]
@@ -1286,7 +1285,7 @@ _data = {
 }
 
 [node name="world" type="Node2D"]
-script = ExtResource("1_bxpnh")
+script = ExtResource("1_hhn1e")
 
 [node name="TileMap" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
@@ -1355,11 +1354,8 @@ sprite_frames = SubResource("SpriteFrames_w0qtp")
 animation = &"TroncoSemGato"
 autoplay = "TroncoSemGato"
 
-[node name="player" parent="." instance=ExtResource("5_kxtq1")]
+[node name="player" parent="." instance=ExtResource("5_iqbe2")]
 position = Vector2(907, -154)
-script = ExtResource("6_bxpnh")
-speed = 80.0
-waypoints = Array[NodePath]([])
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(-184, 19)
@@ -1372,91 +1368,91 @@ limit_bottom = 355
 [node name="fireflies" type="Node2D" parent="."]
 visible = false
 
-[node name="firefly" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(40, 55)
 
-[node name="firefly2" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly2" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(-108, 57)
 
-[node name="firefly3" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly3" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(-81, -96)
 
-[node name="firefly4" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly4" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(76, -133)
 
-[node name="firefly5" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly5" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(217, 111)
 
-[node name="firefly6" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly6" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(-274, -30)
 
-[node name="firefly7" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly7" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(257, -41)
 
-[node name="firefly8" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly8" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(123, 26)
 
-[node name="firefly9" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly9" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(53, 5)
 
-[node name="firefly10" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly10" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(43, -66)
 
-[node name="firefly11" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly11" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(136, -19)
 
-[node name="firefly12" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly12" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(92, 43)
 
-[node name="firefly13" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly13" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(1487, -91)
 
-[node name="firefly14" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly14" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(930, -56)
 
-[node name="firefly15" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly15" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(646, -179)
 
-[node name="firefly16" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly16" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(770, 30)
 
-[node name="firefly17" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly17" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(771, -90)
 
-[node name="firefly18" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly18" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(609, 35)
 
-[node name="firefly19" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly19" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(795, -180)
 
-[node name="firefly20" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly20" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(415, -21)
 
-[node name="firefly21" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly21" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(541, -57)
 
-[node name="firefly22" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly22" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(464, 88)
 
-[node name="firefly23" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly23" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(854, -51)
 
-[node name="firefly24" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly24" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(1092, 30)
 
-[node name="firefly25" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly25" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(952, -173)
 
-[node name="firefly26" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly26" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(1006, 94)
 
-[node name="firefly27" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly27" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(1007, -26)
 
-[node name="firefly28" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly28" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(874, -62)
 
-[node name="firefly29" parent="fireflies" instance=ExtResource("7_fp4h5")]
+[node name="firefly29" parent="fireflies" instance=ExtResource("7_tcv8n")]
 position = Vector2(1031, -116)
 
 [node name="waypoints" type="Node2D" parent="."]
@@ -1466,8 +1462,8 @@ position = Vector2(828, -138)
 position = Vector2(0, 1)
 
 [node name="UI" type="CanvasLayer" parent="." groups=["ui"]]
-script = ExtResource("8_q7np0")
-dialogues = Array[Array]([["???: Com licença?", "Cauda de Esquivo: Uh? AAH! Q-Qqq-quem -é v-v-vvvo-cc-cê?", "???: Acalme-se! Só vim lhe ajudar. Está todo quebrantado e largado, decidi fazer algo  a respeito.", "Cauda de Esquivo: Não vou cair nessa!", "Cauda de Esquivo: PARE! Não me mate, raposa! Sou muito jovem ainda!", "???: Ai, fique parado, seu bobo! Não vim te “matar”, apenas te ajudar.", "linha 6", "linha 7", "", ""]])
+script = ExtResource("8_r702s")
+dialogues = Array[Array]([["???: Com licença?", "Cauda de Esquivo: Uh? AAH! Q-Qqq-quem -é v-v-vvvo-cc-cê?", "???: Acalme-se! Só vim lhe ajudar. Está todo quebrantado e largado, decidi fazer algo  a respeito.", "Cauda de Esquivo: Não vou cair nessa!", "Cauda de Esquivo: PARE! Não me mate, raposa! Sou muito jovem ainda!", "???: Ai, fique parado, seu bobo! Não vim te “matar”, apenas te ajudar.", "linha 6", "linha 7", null, null]])
 
 [node name="Panel" type="Panel" parent="UI"]
 offset_left = 20.0
@@ -1525,9 +1521,9 @@ libraries = {
 &"": SubResource("AnimationLibrary_21bsp")
 }
 
-[node name="bot" parent="." instance=ExtResource("10_q7np0")]
-position = Vector2(588, -138)
-waypoints = Array[NodePath]([NodePath("../waypoints")])
+[node name="bot" parent="." instance=ExtResource("10_yk4xt")]
+position = Vector2(830, -147)
+script = null
 
 [connection signal="pressed" from="CanvasLayer/exit" to="." method="_on_exit_pressed"]
 [connection signal="animation_started" from="Fade/AnimationPlayer" to="." method="_on_animation_player_animation_started"]
