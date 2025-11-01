@@ -49,3 +49,4 @@ func _end_dialogue() -> void:
 	active = false
 	panel.visible = false
 	emit_signal("dialogue_finished")  # o Player ouvirá isso e seguirá para o próximo ponto
+	

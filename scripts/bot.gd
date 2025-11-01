@@ -40,6 +40,8 @@ func _move_to_target() -> void:
 		await get_tree().create_timer(1.0).timeout
 		if ui:
 			moving = false
+			_animated_sprite.play("idle")
+			Gm.playerflip = true
 			ui.start_dialogue(current_index)
 	move_and_slide()
 	

@@ -9,9 +9,13 @@ var interacao
 
 func _physics_process(_delta: float) -> void:
 	direction = Vector2.ZERO
-
+	
+	if Gm.podemovimentar == true and Gm.sceneworld2 == true:
+		_animated_sprite.flip_h = true
+		#Gm.sceneworld2 = false
+	
 	if Gm.podemovimentar == true:
-	# Coleta de entradas com prioridade (horizontal > vertical)
+		# Coleta de entradas com prioridade (horizontal > vertical)
 		if Input.is_action_pressed("right"):
 			direction.x = 1
 		elif Input.is_action_pressed("left"):

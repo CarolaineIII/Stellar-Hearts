@@ -4,7 +4,9 @@ var cenamenu = false
 var podemovimentar = true
 var CutToWorld = false
 var Cut2ToWorld2 = false
+var playerflip = false
 var endsceneworld = false
+var sceneworld2 = false
 func _process(delta: float) -> void:
 	#print(podemovimentar)
 	

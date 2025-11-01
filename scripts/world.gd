@@ -15,13 +15,14 @@ func _ready() -> void:
 		anim.play("fade_in")
 	if scene_file_path == "res://cenas/cutscene2.tscn":
 		anim.play("fade_in")
+	if scene_file_path == "res://cenas/world2.tscn":
+		Gm.sceneworld2 = true
 	player = get_node("player")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-
-		
+			
 	if interacao == true and Input.is_action_just_pressed("interact"):
 		
 		tronco.play("TroncoComGato") #muda para a camera na mesma cena para o gato dentro de um tronco

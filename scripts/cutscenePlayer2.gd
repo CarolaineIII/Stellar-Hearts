@@ -16,8 +16,11 @@ func _ready() -> void:
 	if ui:
 		ui.dialogue_finished.connect(_on_dialogue_finished)
 	_set_target_from_index()
-
-#func _physics_process(_delta: float) -> void:
+	
+func _physics_process(_delta: float) -> void:
+	if Gm.playerflip == true:
+		_animated_sprite.flip_h = true
+		
 	#if moving:
 		#_move_to_target()
 	#else:
