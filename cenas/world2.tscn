@@ -1463,7 +1463,7 @@ position = Vector2(0, 1)
 
 [node name="UI" type="CanvasLayer" parent="." groups=["ui"]]
 script = ExtResource("8_r702s")
-dialogues = Array[Array]([["???: Com licença?", "Cauda de Esquivo: Uh? AAH! Q-Qqq-quem -é v-v-vvvo-cc-cê?", "???: Acalme-se! Só vim lhe ajudar. Está todo quebrantado e largado, decidi fazer algo  a respeito.", "Cauda de Esquivo: Não vou cair nessa!", "Cauda de Esquivo: PARE! Não me mate, raposa! Sou muito jovem ainda!", "???: Ai, fique parado, seu bobo! Não vim te “matar”, apenas te ajudar.", "linha 6", "linha 7", null, null]])
+dialogues = Array[Array]([["???: Com licença?", "Cauda de Esquivo: Uh? AAH! Q-Qqq-quem -é v-v-vvvo-cc-cê?", "???: Acalme-se! Só vim lhe ajudar. Está todo quebrantado e largado, decidi fazer algo  a respeito.", "Cauda de Esquivo: Não vou cair nessa!", "*Cena de perseguição*", "Cauda de Esquivo: PARE! Não me mate, raposa! Sou muito jovem ainda!", "???: Ai, fique parado, seu bobo! Não vim te “matar”, apenas te ajudar.", "Cauda de Esquivo: Eu não preciso de sua ajuda! Sei que está mentindo para mim!", "???: Não, não estou! Permita-me te levar para meu abrigo.", "Cauda de Esquivo: ...", "???: Está bem! Já que insiste, fique e morra aí mesmo, não vou nem me importar em ver sua terrível derrota.", "Cauda de Esquivo: Você não se importou nem no começo, apenas em sua barriga."]])
 
 [node name="Panel" type="Panel" parent="UI"]
 offset_left = 20.0
