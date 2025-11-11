@@ -4,3 +4,7 @@
 
 [node name="GM" type="Node"]
 script = ExtResource("1_6qwq6")
+
+[node name="Temporizador" type="Timer" parent="."]
+
+[connection signal="timeout" from="Temporizador" to="." method="_on_temporizador_timeout"]
