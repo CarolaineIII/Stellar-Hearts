@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://d03o5dhn3g33v"]
+[gd_scene load_steps=28 format=4 uid="uid://d03o5dhn3g33v"]
 
 [ext_resource type="Script" uid="uid://bh6iecugafx0p" path="res://scripts/world.gd" id="1_hhn1e"]
 [ext_resource type="Texture2D" uid="uid://csrduemqx84c0" path="res://Assets/Sprites/mana seed seasonal forest sample (summer)/seasonal sample (summer).png" id="2_rcfoi"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c27s5xqgkr4xq" path="res://instanciaveis/firefly.tscn" id="7_tcv8n"]
 [ext_resource type="Script" uid="uid://de2blxujp10ll" path="res://scripts/dialogueManager2.gd" id="8_r702s"]
 [ext_resource type="Texture2D" uid="uid://c47kl877ahkcw" path="res://Assets/Sprites/UiCozyFree.png/UiCozyFree.png" id="9_b80ij"]
+[ext_resource type="Script" uid="uid://dhqr272gesitw" path="res://scripts/botfollow.gd" id="10_hhn1e"]
 [ext_resource type="PackedScene" uid="uid://dlg38opseay86" path="res://instanciaveis/bot.tscn" id="10_yk4xt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0s5xy"]
@@ -1289,7 +1290,7 @@ _data = {
 &"fade_in": SubResource("Animation_8mpgf")
 }
 
-[node name="world" type="Node2D"]
+[node name="world3" type="Node2D"]
 script = ExtResource("1_hhn1e")
 
 [node name="TileMap" type="Node2D" parent="."]
@@ -1527,7 +1528,9 @@ libraries = {
 
 [node name="bot" parent="." instance=ExtResource("10_yk4xt")]
 position = Vector2(811, -154)
-script = null
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("10_hhn1e")
 
 [connection signal="pressed" from="CanvasLayer/exit" to="." method="_on_exit_pressed"]
 [connection signal="animation_started" from="Fade/AnimationPlayer" to="." method="_on_animation_player_animation_started"]

@@ -123,6 +123,8 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ivqwt"]
 
 [node name="bot" type="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 0
 script = ExtResource("1_ivqwt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -131,7 +133,6 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(0, 11)
 scale = Vector2(1.5, 1)
 shape = SubResource("RectangleShape2D_ivqwt")
