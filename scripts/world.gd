@@ -13,10 +13,13 @@ func _ready() -> void:
 		anim.play("fade_in")
 	if scene_file_path == "res://cenas/world.tscn":
 		anim.play("fade_in")
+		
 	if scene_file_path == "res://cenas/cutscene2.tscn":
 		anim.play("fade_in")
-	if scene_file_path == "res://cenas/world2.tscn":
+	if scene_file_path == "res://cenas/world2.tscn": 
 		Gm.sceneworld2 = true
+	else:
+		Gm.sceneworld2 = false
 	player = get_node("player")
 
 
@@ -39,11 +42,12 @@ func _process(_delta: float) -> void:
 		get_tree().change_scene_to_file("res://cenas/cutscene2.tscn")
 		player.position = Vector2(1040, -70) #muda o player de posição alem de deixar invisivel (linha 26)
 	
-	if Gm.CutToWorld == true:
+	if Gm.CutToWorld == true: #Talvez aqui ele apresente um "piscar"na troca de cena
 		
 		anim.play("fade_out")
 		await get_tree().create_timer(1.0).timeout
 		get_tree().change_scene_to_file("res://cenas/world.tscn")
+		
 		Gm.CutToWorld = false
 		
 		

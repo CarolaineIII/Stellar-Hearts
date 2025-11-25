@@ -21,6 +21,9 @@ func _physics_process(_delta: float) -> void:
 		_play_walk_anim()
 	else:
 		_play_idle()
+	
+	if Gm.world2dialogue == true:
+		_animated_sprite.play("Idle")
 
 func _set_target_from_index() -> void:
 	if current_index < waypoints.size():

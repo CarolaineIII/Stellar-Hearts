@@ -7,6 +7,7 @@ var interacao
 @onready var _animated_sprite = $AnimatedSprite2D
 @onready var botfollow = $"../bot"
 func _physics_process(_delta: float) -> void:
+
 	# ... (código de coleta de input e animação existentes) ...
 	if position.distance_to(botfollow.position)< 50:
 		Gm.botpodemover = false
@@ -19,6 +20,7 @@ func _physics_process(_delta: float) -> void:
 	if Gm.podemovimentar == true and Gm.sceneworld2 == true:
 		_animated_sprite.flip_h = true
 		Gm.sceneworld2 = false
+		Gm.sceneworld2a = true
 	
 	if Gm.podemovimentar == true:
 		# Coleta de entradas com prioridade (horizontal > vertical)
@@ -31,6 +33,13 @@ func _physics_process(_delta: float) -> void:
 		elif Input.is_action_pressed("up"):
 			direction.y = -1
 			
+	if self.global_position.x < 270 and Gm.sceneworld2a == true :
+
+		print("passei")
+		Gm.podemovimentar = false
+		_animated_sprite.flip_h = false
+		Gm.world2dialogue = true
+
 
 
 #Animações

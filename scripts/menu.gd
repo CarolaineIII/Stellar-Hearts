@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var anim = $Fade/AnimationPlayer
+
 func _ready() -> void:
 	Gm.cenamenu = true
 # Quando o botão Play for pressionado

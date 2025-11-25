@@ -9,6 +9,8 @@ var speed = 100
 
 func _physics_process(delta: float) -> void:
 	
+	if Gm.world2dialogue == true:
+		_animated_sprite.play("idle")
 	
 	# O Vermelho só deve se mover se houver uma posição para seguir no histórico
 	if Gm.branco_historico_posicoes.size() > 0:

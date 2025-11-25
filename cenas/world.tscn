@@ -1308,6 +1308,7 @@ offset_bottom = 404.0
 color = Color(0, 0, 0, 0.407843)
 
 [node name="ColorRect" type="ColorRect" parent="Fade"]
+visible = false
 z_index = 9
 layout_mode = 0
 offset_left = -591.0

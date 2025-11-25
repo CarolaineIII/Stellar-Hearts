@@ -1,10 +1,11 @@
-[gd_scene load_steps=28 format=4 uid="uid://d03o5dhn3g33v"]
+[gd_scene load_steps=29 format=4 uid="uid://d03o5dhn3g33v"]
 
 [ext_resource type="Script" uid="uid://bh6iecugafx0p" path="res://scripts/world.gd" id="1_hhn1e"]
 [ext_resource type="Texture2D" uid="uid://csrduemqx84c0" path="res://Assets/Sprites/mana seed seasonal forest sample (summer)/seasonal sample (summer).png" id="2_rcfoi"]
 [ext_resource type="Texture2D" uid="uid://bj6d34181uq3q" path="res://Assets/Sprites/TroncoComGato.png" id="3_dkvso"]
 [ext_resource type="Texture2D" uid="uid://b8j4u6r3xfglb" path="res://Assets/Sprites/Tronco Sem Gato.png" id="4_1vbbs"]
 [ext_resource type="PackedScene" uid="uid://cq7w64orof780" path="res://instanciaveis/player.tscn" id="5_iqbe2"]
+[ext_resource type="Texture2D" uid="uid://is4l8vdtosv7" path="res://Assets/Sprites/Forest toon-style sprites pack 1.1 (1)/Forest toon-style sprites pack 1.1/Rocks/small_rock_sheet.png" id="6_rcfoi"]
 [ext_resource type="PackedScene" uid="uid://c27s5xqgkr4xq" path="res://instanciaveis/firefly.tscn" id="7_tcv8n"]
 [ext_resource type="Script" uid="uid://de2blxujp10ll" path="res://scripts/dialogueManager2.gd" id="8_r702s"]
 [ext_resource type="Texture2D" uid="uid://c47kl877ahkcw" path="res://Assets/Sprites/UiCozyFree.png/UiCozyFree.png" id="9_b80ij"]
@@ -1366,10 +1367,14 @@ position = Vector2(907, -154)
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(-184, 19)
 zoom = Vector2(2, 2)
-limit_left = -400
+limit_left = 0
 limit_top = -300
 limit_right = 1400
 limit_bottom = 355
+
+[node name="SmallRockSheet" type="Sprite2D" parent="player"]
+position = Vector2(-600, 525)
+texture = ExtResource("6_rcfoi")
 
 [node name="fireflies" type="Node2D" parent="."]
 visible = false
