@@ -2429,10 +2429,10 @@ tile_map_data = PackedByteArray("AADx/+7/AAALAAAAAADx/+//AAALAAEAAADx//D/AAALAAI
 tile_set = SubResource("TileSet_liar5")
 
 [node name="bot" parent="." instance=ExtResource("6_282o3")]
-position = Vector2(-11, 150)
+position = Vector2(121, 16)
 
 [node name="player" parent="." instance=ExtResource("3_wi8rx")]
-position = Vector2(-84, 153)
+position = Vector2(-64, 0)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(114, 0)
@@ -2445,6 +2445,7 @@ position_smoothing_speed = 20.0
 
 [node name="UI" type="CanvasLayer" parent="." groups=["ui"]]
 script = ExtResource("8_mir7d")
+dialogues = Array[Array]([["Aliás, qual o seu nome?", "Me chamo Cauda de Esquivo, e você?", "Bem, eu… Não gosto muito do nome que me batizaram. Prefiro não dizer.", "Ah, vamos! Prometo não demonstrar reações negativas. ", "Certo, certo. Meu nome, é.. Por algum motivo, Presença Indesejada.", "Ah, está tudo bem. Afinal é só um nome mesmo."]])
 
 [node name="Panel" type="Panel" parent="UI"]
 offset_left = 20.0

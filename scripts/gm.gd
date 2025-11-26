@@ -22,7 +22,7 @@ const CAUDA_TAMANHO: int = 100
 
 func _process(delta: float) -> void:
 	# ... código existente ...
-	print(world2dialogue)
+
 	
 	if Cut2ToWorld2 == true:
 		get_tree().change_scene_to_file("res://cenas/world2.tscn")
