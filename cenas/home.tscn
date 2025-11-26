@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://bs4plhi5pmt1y"]
+[gd_scene load_steps=24 format=4 uid="uid://bs4plhi5pmt1y"]
 
 [ext_resource type="Texture2D" uid="uid://csrduemqx84c0" path="res://Assets/Sprites/mana seed seasonal forest sample (summer)/seasonal sample (summer).png" id="1_37ybl"]
 [ext_resource type="Texture2D" uid="uid://j7nmdderkd74" path="res://Assets/Sprites/Forest toon-style sprites pack 1.1 (1)/Forest toon-style sprites pack 1.1/Ground/soil_16x16_sheet.png" id="2_7bw3u"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://f58hvwy17vr5" path="res://Assets/Sprites/FreePack.png/FreePack.png" id="4_282o3"]
 [ext_resource type="Texture2D" uid="uid://bjd1lygv3vb5j" path="res://Assets/Sprites/tileset.png" id="5_mir7d"]
 [ext_resource type="PackedScene" uid="uid://dlg38opseay86" path="res://instanciaveis/bot.tscn" id="6_282o3"]
+[ext_resource type="Script" uid="uid://cec6p3wxbhx4a" path="res://scripts/dialogueManager4.gd" id="8_mir7d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7bw3u"]
 texture = ExtResource("1_37ybl")
@@ -2380,7 +2381,7 @@ texture = ExtResource("1_37ybl")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_sj6kh")
 
-[node name="Node2D" type="Node2D"]
+[node name="Home" type="Node2D"]
 
 [node name="TileMap" type="Node2D" parent="."]
 
@@ -2431,7 +2432,7 @@ tile_set = SubResource("TileSet_liar5")
 position = Vector2(-11, 150)
 
 [node name="player" parent="." instance=ExtResource("3_wi8rx")]
-position = Vector2(-10, 167)
+position = Vector2(-84, 153)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(114, 0)
@@ -2441,3 +2442,19 @@ limit_right = 752
 limit_bottom = 448
 position_smoothing_enabled = true
 position_smoothing_speed = 20.0
+
+[node name="UI" type="CanvasLayer" parent="." groups=["ui"]]
+script = ExtResource("8_mir7d")
+
+[node name="Panel" type="Panel" parent="UI"]
+offset_left = 20.0
+offset_top = 503.0
+offset_right = 1101.0
+offset_bottom = 625.0
+
+[node name="Label" type="Label" parent="UI/Panel"]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 46.0
+offset_right = 316.0
+offset_bottom = 107.0

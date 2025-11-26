@@ -11,6 +11,7 @@ var sceneworld2 = false
 var sceneworld2a = false
 var botpodemover = false
 var world2dialogue = false
+var world2tohome = false
 # --- NOVO: Variável para armazenar o histórico de posições do Branco ---
 # Usaremos um Array de Vector2 para isso.
 var branco_historico_posicoes: Array[Vector2] = []
@@ -21,7 +22,7 @@ const CAUDA_TAMANHO: int = 100
 
 func _process(delta: float) -> void:
 	# ... código existente ...
-	print(sceneworld2)
+	print(world2dialogue)
 	
 	if Cut2ToWorld2 == true:
 		get_tree().change_scene_to_file("res://cenas/world2.tscn")

@@ -20,6 +20,8 @@ func _ready() -> void:
 		Gm.sceneworld2 = true
 	else:
 		Gm.sceneworld2 = false
+	if scene_file_path == "res://cenas/home.tscn":
+		anim.play("fade_in")
 	player = get_node("player")
 
 
@@ -55,6 +57,9 @@ func _process(_delta: float) -> void:
 	if Gm.endsceneworld == true:
 		anim.play("fade_out") #A cena atual deve escurecer para então entrar a proxima cena (mas parece que a animação que roda é a fade in)
 		Gm.endsceneworld = false #reseta o sinal
+	if Gm.world2tohome == true:
+		anim.play("fade_out") #A cena atual deve escurecer para então entrar a proxima cena (mas parece que a animação que roda é a fade in)
+		Gm.world2tohome = false #reseta o sinal
 		
 func _on_exit_pressed() -> void:
 	get_tree().quit()

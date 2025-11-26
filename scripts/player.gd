@@ -35,7 +35,7 @@ func _physics_process(_delta: float) -> void:
 			
 	if self.global_position.x < 270 and Gm.sceneworld2a == true :
 
-		print("passei")
+		
 		Gm.podemovimentar = false
 		_animated_sprite.flip_h = false
 		Gm.world2dialogue = true

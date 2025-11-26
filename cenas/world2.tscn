@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cq7w64orof780" path="res://instanciaveis/player.tscn" id="5_iqbe2"]
 [ext_resource type="Texture2D" uid="uid://is4l8vdtosv7" path="res://Assets/Sprites/Forest toon-style sprites pack 1.1 (1)/Forest toon-style sprites pack 1.1/Rocks/small_rock_sheet.png" id="6_rcfoi"]
 [ext_resource type="PackedScene" uid="uid://c27s5xqgkr4xq" path="res://instanciaveis/firefly.tscn" id="7_tcv8n"]
-[ext_resource type="Script" uid="uid://de2blxujp10ll" path="res://scripts/dialogueManager2.gd" id="8_r702s"]
+[ext_resource type="Script" uid="uid://cj2wabfkfobav" path="res://scripts/dialogueManager3.gd" id="8_rcfoi"]
 [ext_resource type="Texture2D" uid="uid://c47kl877ahkcw" path="res://Assets/Sprites/UiCozyFree.png/UiCozyFree.png" id="9_b80ij"]
 [ext_resource type="Script" uid="uid://dhqr272gesitw" path="res://scripts/botfollow.gd" id="10_hhn1e"]
 [ext_resource type="PackedScene" uid="uid://dlg38opseay86" path="res://instanciaveis/bot.tscn" id="10_yk4xt"]
@@ -1472,8 +1472,8 @@ position = Vector2(812, -154)
 [node name="point1" type="Marker2D" parent="waypoints"]
 
 [node name="UI" type="CanvasLayer" parent="." groups=["ui"]]
-script = ExtResource("8_r702s")
-dialogues = Array[Array]([["???: Com licença?", "Cauda de Esquivo: Uh? AAH! Q-Qqq-quem -é v-v-vvvo-cc-cê?", "???: Acalme-se! Só vim lhe ajudar. Está todo quebrantado e largado, decidi fazer algo  a respeito.", "Cauda de Esquivo: Não vou cair nessa!", "*Cena de perseguição*", "Cauda de Esquivo: PARE! Não me mate, raposa! Sou muito jovem ainda!", "???: Ai, fique parado, seu bobo! Não vim te “matar”, apenas te ajudar.", "Cauda de Esquivo: Eu não preciso de sua ajuda! Sei que está mentindo para mim!", "???: Não, não estou! Permita-me te levar para meu abrigo.", "Cauda de Esquivo: ...", "???: Está bem! Já que insiste, fique e morra aí mesmo, não vou nem me importar em ver sua terrível derrota.", "Cauda de Esquivo: Você não se importou nem no começo, apenas em sua barriga."]])
+script = ExtResource("8_rcfoi")
+dialogues = Array[Array]([["PARE! Não me mate, raposa! Sou muito jovem ainda!", "Ai, fique parado, seu bobo! Não vim te “matar”, apenas te ajudar.", "Eu não preciso de sua ajuda! Sei que está mentindo para mim!", "Não, não estou! Permita-me te levar para meu abrigo.", "...", "Está bem! Já que insiste, fique e morra aí mesmo, não vou nem me importar em ver sua terrível derrota.", "Você não se importou nem no começo, apenas em sua barriga.", "E como acha que vai sobreviver assim? Você sabe que só tem a mim como esperança, não é?", "... ", "Não tem jeito... Ok. Vou te levar para minha casa até que se recupere. "]])
 
 [node name="Panel" type="Panel" parent="UI"]
 offset_left = 20.0
