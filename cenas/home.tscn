@@ -1,6 +1,7 @@
-[gd_scene load_steps=24 format=4 uid="uid://bs4plhi5pmt1y"]
+[gd_scene load_steps=28 format=4 uid="uid://bs4plhi5pmt1y"]
 
 [ext_resource type="Texture2D" uid="uid://csrduemqx84c0" path="res://Assets/Sprites/mana seed seasonal forest sample (summer)/seasonal sample (summer).png" id="1_37ybl"]
+[ext_resource type="Script" uid="uid://lj6mqkqwl7vw" path="res://scripts/home.gd" id="1_sj6kh"]
 [ext_resource type="Texture2D" uid="uid://j7nmdderkd74" path="res://Assets/Sprites/Forest toon-style sprites pack 1.1 (1)/Forest toon-style sprites pack 1.1/Ground/soil_16x16_sheet.png" id="2_7bw3u"]
 [ext_resource type="Texture2D" uid="uid://8s4liq7r0tww" path="res://Assets/Sprites/AnimatedTreeFree/AnimatedTreeFree/Freedecorations.png" id="3_0d2e0"]
 [ext_resource type="PackedScene" uid="uid://cq7w64orof780" path="res://instanciaveis/player.tscn" id="3_wi8rx"]
@@ -2381,7 +2382,44 @@ texture = ExtResource("1_37ybl")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_sj6kh")
 
+[sub_resource type="Animation" id="Animation_xnx65"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_8mpgf"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_21bsp"]
+_data = {
+&"RESET": SubResource("Animation_xnx65"),
+&"fade_in": SubResource("Animation_8mpgf")
+}
+
 [node name="Home" type="Node2D"]
+script = ExtResource("1_sj6kh")
 
 [node name="TileMap" type="Node2D" parent="."]
 
@@ -2459,3 +2497,24 @@ offset_left = 31.0
 offset_top = 46.0
 offset_right = 316.0
 offset_bottom = 107.0
+
+[node name="Fade" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Fade"]
+z_index = 9
+layout_mode = 0
+offset_left = -740.0
+offset_top = -457.0
+offset_right = 855.0
+offset_bottom = 505.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Fade"]
+libraries = {
+&"": SubResource("AnimationLibrary_21bsp")
+}

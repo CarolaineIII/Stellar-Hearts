@@ -65,6 +65,4 @@ func _end_dialogue() -> void:
 	
 	
 	# Troca de cena para "res://cenas/home.tscn"
-	#if NEXT_SCENE_PATH != "":
-		#Gm.world2tohome = true
-		#get_tree().change_scene_to_file(NEXT_SCENE_PATH)
+	#eee

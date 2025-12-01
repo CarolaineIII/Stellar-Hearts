@@ -1520,10 +1520,10 @@ metadata/_edit_use_anchors_ = true
 visible = false
 z_index = 9
 layout_mode = 0
-offset_left = -591.0
-offset_top = -362.0
-offset_right = 702.0
-offset_bottom = 372.0
+offset_left = -740.0
+offset_top = -457.0
+offset_right = 553.0
+offset_bottom = 277.0
 color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Fade"]

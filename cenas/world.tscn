@@ -1308,7 +1308,6 @@ offset_bottom = 404.0
 color = Color(0, 0, 0, 0.407843)
 
 [node name="ColorRect" type="ColorRect" parent="Fade"]
-visible = false
 z_index = 9
 layout_mode = 0
 offset_left = -591.0
@@ -1573,7 +1572,6 @@ debug_color = Color(0.999208, 0, 0.120354, 0.42)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
-one_shot = true
 
 [connection signal="ready" from="Fade/AnimationPlayer" to="." method="_on_animation_player_ready"]
 [connection signal="pressed" from="CanvasLayer/exit" to="." method="_on_exit_pressed"]

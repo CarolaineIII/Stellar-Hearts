@@ -56,9 +56,11 @@ func _process(_delta: float) -> void:
 	#analisa a situação da cena de acordo com o sinal enviado ao GM
 	if Gm.endsceneworld == true:
 		anim.play("fade_out") #A cena atual deve escurecer para então entrar a proxima cena (mas parece que a animação que roda é a fade in)
+		get_tree().create_timer(1.0).timeout
 		Gm.endsceneworld = false #reseta o sinal
 	if Gm.world2tohome == true:
 		anim.play("fade_out") #A cena atual deve escurecer para então entrar a proxima cena (mas parece que a animação que roda é a fade in)
+		await get_tree().create_timer(1.0).timeout
 		Gm.world2tohome = false #reseta o sinal
 		
 func _on_exit_pressed() -> void:
